@@ -38,7 +38,17 @@ $morse_character_code = {
 }
 
 def decode_char(char)
-  return $morse_character_code.key(char)
+  return $morse_character_code.key(char).to_s
 end
 
-print decode_char(".-")
+def decode_word(word_in_morse)
+  word_in_ascii = ""
+
+  word_in_morse.split(' ').each do |char|
+    word_in_ascii += decode_char(char)
+  end
+
+  return word_in_ascii
+end
+
+print decode_word("-- -.--")
