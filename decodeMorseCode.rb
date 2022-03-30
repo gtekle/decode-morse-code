@@ -66,4 +66,4 @@ def decode(message)
   return message_in_ascii
 end
 
-print decode("-- -.--   -. .- -- .")
+print decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
