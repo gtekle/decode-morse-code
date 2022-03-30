@@ -62,12 +62,8 @@ def decode(message)
       message_in_ascii += "#{decode_word(word)}"
     end
   end
-  
-  return message_in_ascii 
 
+  return message_in_ascii
 end
 
 print decode("-- -.--   -. .- -- .")
-
-
-#print decode_word("-. .- -- .")
