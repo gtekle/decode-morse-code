@@ -51,4 +51,23 @@ def decode_word(word_in_morse)
   return word_in_ascii
 end
 
-print decode_word("-- -.--")
+def decode(message)
+  message_in_ascii = ""
+  last_word = message.split('   ').last
+
+  message.split('   ').each do |word|
+    unless word === last_word
+      message_in_ascii += "#{decode_word(word)} "
+    else
+      message_in_ascii += "#{decode_word(word)}"
+    end
+  end
+  
+  return message_in_ascii 
+
+end
+
+print decode("-- -.--   -. .- -- .")
+
+
+#print decode_word("-. .- -- .")
